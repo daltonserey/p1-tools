@@ -20,7 +20,7 @@ def main():
         sys.exit(1)
 
     py_module = sys.argv[1]
-    module_globals = runpy.run_path("./" + py_module)
+    module_globals = runpy.run_path(py_module)
     #code.interact(local=module_globals)
     console = SilentInteractiveConsole(locals=module_globals)
     banner = f"{LWHITE}=== {py_module} executado e pausado{RESET}"
